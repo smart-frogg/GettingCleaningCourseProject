@@ -6,6 +6,7 @@ Solution consists of:
 - Script file run_analisys.R
 - [Code book](CodeBook.md) 
 - This readme file
+- Documentation for initial dataset: [Read me](README.txt) and [Features description](Features.txt)
 
 ##Script README
 Script contains a set of functions, which solve different tasks for cleaning data from [Human Activity Recognition Using Smartphones Dataset](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
