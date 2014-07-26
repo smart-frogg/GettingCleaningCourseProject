@@ -71,13 +71,13 @@ Parameters:
 ```
 > source("run_analysis.R")
 > tidy_data <- get_tidy_dataset(save_to_file = T)
-[1] "Directory for data created."
-[1] "Dataset arhive downloaded."
-[1] "Dataset extracted."
-[1] "Reading train dataset..."
-[1] "Reading test dataset..."
-[1] "Merging..."
-[1] "Done!"
+Directory for data created.
+Dataset arhive downloaded.
+Dataset extracted.
+Reading train dataset...
+Reading test dataset...
+Merging...
+Done!
 > dim(tidy_data)
 [1] 180  68
 ```

@@ -7,23 +7,23 @@ download_dataset <- function()
 {
   if(!file.exists("./data"))
   {
-    print("Create directory for data...")
+    message("Create directory for data...")
     dir.create("./data");
   }
-  print("Directory for data created.")
+  message("Directory for data created.")
   if(!file.exists("./data/data.zip"))
   {
-    print("Download dataset archive...")
+    message("Download dataset archive...")
     file.url = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip";
     download.file(file.url,"./data/data.zip");
   }
-  print("Dataset arhive downloaded.")
+  message("Dataset arhive downloaded.")
   if(!file.exists("./data/UCI HAR Dataset"))
   {
-    print("Extract dataset...")
+    message("Extract dataset...")
     unzip("./data/data.zip",exdir = "./data" );
   }  
-  print("Dataset extracted.")
+  message("Dataset extracted.")
 }
 
 # read activity labels and feature labels
@@ -108,14 +108,14 @@ get_merged_dataset <- function(read_additional_data = FALSE, save_to_file = FALS
   read_handbook()
   
   # read and merge datasets
-  print("Reading train dataset...")
+  message("Reading train dataset...")
   train_data <- read_dataset("train", read_additional_data)
   
   #return(train_data)
-  print("Reading test dataset...")
+  message("Reading test dataset...")
   test_data <- read_dataset("test", read_additional_data)
   
-  print("Merging...")
+  message("Merging...")
   full_data <- rbind(train_data,test_data)
 
   # create activity factor
@@ -133,7 +133,7 @@ get_merged_dataset <- function(read_additional_data = FALSE, save_to_file = FALS
   {
     write.table(full_data, file = "./data/full_dataset.txt");
   }
-  print("Done!")
+  message("Done!")
   return (full_data)
 }
 
